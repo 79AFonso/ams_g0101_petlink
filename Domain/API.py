@@ -22,7 +22,7 @@ config = {
              "tools.staticdir.dir": "../Site/css/" },
 #   "/scss": { "tools.staticdir.on": True,
 # 			 "tools.staticdir.dir": "../Site/scss/" },
-  "/images":{"tools.staticdir.on": True,
+  "/img":{"tools.staticdir.on": True,
 			 "tools.staticdir.dir": "../Site/img" },
   "/html": { "tools.staticdir.on": True,
              "tools.staticdir.dir": "../Site/" },
@@ -66,6 +66,10 @@ class Root(object):
     def about(self):
         return open("../Site/about.html").read()
 
+    @cherrypy.expose
+    def contact(self):
+        return open("../Site/contact.html").read()
+
     index.exposed = True 
 
 class Actions(object):
@@ -75,6 +79,15 @@ class Actions(object):
             raise cherrypy.HTTPRedirect("/profile")
         else:
             raise cherrypy.HTTPRedirect("/login")
+
+    @cherrypy.expose
+    def doSignup(self, nome=None, apelido=None, email=None, password=None):
+        if len(nome)==0 or len(apelido)==0 or len(email)==0 or len(password)==0:
+            raise cherrypy.HTTPRedirect("/index")
+        if '@' not in email:
+            raise cherrypy.HTTPRedirect("/index")
+        else:
+            raise cherrypy.HTTPRedirect("/subcription")
 
 class HelloWorld(object):
     def index(self):
