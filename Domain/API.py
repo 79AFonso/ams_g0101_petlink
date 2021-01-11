@@ -53,10 +53,9 @@ class Root(object):
     def shop(self):
         return open("../Site/shop.html").read()
 
-    # @cherrypy.expose
-    # def pic(self):
-    #     cherrypy.response.headers["Content-Type"] = "text/html"
-    #     return open("../Site/Pic.html").read()
+    @cherrypy.expose
+    def product(self):
+        return open("../Site/product.html").read()
 
     @cherrypy.expose
     def subcription(self):
@@ -70,7 +69,15 @@ class Root(object):
     def contact(self):
         return open("../Site/contact.html").read()
 
-    index.exposed = True 
+    @cherrypy.expose
+    def cart(self):
+        return open("../Site/cart.html").read()
+
+    @cherrypy.expose
+    def chat(self):
+        return open("../Site/chat.html").read()
+
+    index.exposed = True
 
 class Actions(object):
     @cherrypy.expose
