@@ -11,7 +11,7 @@ from io import BytesIO
 
 baseDir = os.path.dirname(os.path.abspath(__file__))
 
-USERS = {'admin': 'admin', 'medico': 'medico', 'cliente': 'cliente'}
+USERS = {'medico': 'medico', 'cliente': 'cliente'}
 
 # Dict with the this app's configuration:
 config = {
@@ -72,16 +72,28 @@ class Root(object):
     @cherrypy.expose
     def cart(self):
         return open("../Site/cart.html").read()
+    
+    @cherrypy.expose
+    def clinicsheets(self):
+        return open("../Site/clinicsheets.html").read()
 
     @cherrypy.expose
-    def chat(self):
-        return open("../Site/chat.html").read()
+    def administration(self):
+        return open("../Site/administration.html").read()
+
+    @cherrypy.expose
+    def administrationstore(self):
+        return open("../Site/administrationStore.html").read()
 
     index.exposed = True
 
 class Actions(object):
+
+
     @cherrypy.expose
     def doLogin(self, username=None, password=None):
+        if username == "admin" and password == "admin":
+             raise cherrypy.HTTPRedirect("/administration")
         if username in USERS and USERS[username] == password:
             raise cherrypy.HTTPRedirect("/profile")
         else:
@@ -94,6 +106,7 @@ class Actions(object):
         if '@' not in email:
             raise cherrypy.HTTPRedirect("/index")
         else:
+            USERS[email] = password
             raise cherrypy.HTTPRedirect("/subcription")
 
 class HelloWorld(object):
