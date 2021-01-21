@@ -28,7 +28,11 @@ config = {
              "tools.staticdir.dir": "../Site/" },
 }
 
-cherrypy.config.update({'server.socket_port': 10022,})
+port = os.environ['PORT']
+cherrypy.config.update({
+                            'server.socket_host': '0.0.0.0',
+                            'server.socket_port': int(port),
+                           })
 
 class Root(object):
     def __init__(self):

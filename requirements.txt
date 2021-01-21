@@ -1,0 +1,4 @@
+CherryPy==18.6.0
+Flask==1.1.2
+gunicorn @ git+https://github.com/benoitc/gunicorn.git@d1f0f11b7b7d00f74dc22ead8e62d322eb128431
+requests==2.18.4
