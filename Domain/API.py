@@ -11,7 +11,7 @@ from io import BytesIO
 
 baseDir = os.path.dirname(os.path.abspath(__file__))
 
-USERS = {'medico': 'medico', 'cliente': 'cliente'}
+USERS = {'cliente': 'cliente'}
 
 # Dict with the this app's configuration:
 config = {
@@ -85,11 +85,13 @@ class Root(object):
     def administrationstore(self):
         return open("../Site/administrationStore.html").read()
 
+    @cherrypy.expose
+    def payment(self):
+        return open("../Site/payment.html").read()
+
     index.exposed = True
 
 class Actions(object):
-
-
     @cherrypy.expose
     def doLogin(self, username=None, password=None):
         if username == "admin" and password == "admin":

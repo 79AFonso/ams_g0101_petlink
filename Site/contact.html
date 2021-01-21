@@ -36,7 +36,7 @@
             }
             
             .button1 {border-radius: 12px;}
-            </style>
+        </style>
     </head>
 
     <body>
@@ -62,12 +62,12 @@
 
                                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                     <div class="navbar-nav ml-auto">
-                                        <a href="shop" class="nav-item nav-link active">Loja</a>
+                                        <a href="shop" class="nav-item nav-link">Loja</a>
                                         <a href="about" class="nav-item nav-link">About</a>
                                         <!-- <a href="service" class="nav-item nav-link">Service</a>
                                         <a href="portfolio" class="nav-item nav-link">Project</a>
                                         <a href="single" class="nav-item nav-link">Single</a> -->
-                                        <a href="contact" class="nav-item nav-link">Contact</a>
+                                        <a href="contact" class="nav-item nav-link active">Marcação consulta</a>
                                         <div class="nav-item dropdown">
                                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Conta</a>
                                             <div class="dropdown-menu">
@@ -107,7 +107,20 @@
                                 <textarea cols="120" rows="12" placeholder="        Diga-nos o problema do seu animal" style ="border-radius: 36px;"></textarea>
                             </div>
                             <div class="col-md-9" style="text-align: left;">
-                                <button class="button button1">Enviar mensagem</button>
+
+                                <button class="button button1" onclick="myFunction()">Enviar mensagem</button>
+
+                                <script>
+                                    function myFunction() {
+                                      var txt;
+                                      if (confirm("Mensagem enviada!")) {
+                                        txt = "You pressed OK!";
+                                      } else {
+                                        txt = "You pressed Cancel!";
+                                      }
+                                      document.getElementById("demo").innerHTML = txt;
+                                    }
+                                </script>
                             </div>
                     </div>
                 </div>

@@ -36,11 +36,19 @@
             }
             
             .button1 {border-radius: 12px;}
-            </style>
+
+            .content {
+                max-width: 500px;
+                margin: auto;
+            }
+        </style>
     </head>
     
     <body>
         <div class="wrapper">
+            <div style="text-align: right;">
+                <a class="button button1" href="index">Log Out</a>
+            </div>
             <!-- Portfolio Start -->
             <div class="portfolio">
                 <div class="container">
@@ -48,14 +56,14 @@
                         <h2>Adicionar Produto</h2>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
-                            <form>
+                        <div class="content">
+                            <form style="text-align: center;">
                                 <input type="file" name="photo" accept=".jpg,.JPEG,.JPG,.jpeg" class="form-control-file file">
-                                <br></br>
+                                <p></p>
                                 <input class="form-control" type="text" name="nome" value="" placeholder="Nome do Produto">
-                                <br></br>
+                                <p></p>
                                 <input class="form-control" type="text" name="preço" value="" placeholder="Preço do Produto">
-                                <br></br>
+                                <p></p>
                                 <button type="submit" class="button button1">Upload</button>
                             </form>
                         </div>
