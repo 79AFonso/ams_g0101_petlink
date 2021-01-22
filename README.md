@@ -1,2 +1,2 @@
 LINK
-https://79afonso.github.io/ams_g0101_petlink/
+https://ams-101-petlink.herokuapp.com/index
