@@ -21,6 +21,7 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        
         <style>
             .button {
               background-color: #00539C; /* Green */
@@ -47,7 +48,7 @@
                     <div class="header-top row align-items-center">
                         <div class="col-lg-3">
                             <div class="brand">
-                                <a href="index">
+                                <a>
                                     PetLink
                                     <!-- <img src="img/logo.png" alt="Logo"> -->
                                 </a>
@@ -97,18 +98,28 @@
                                 <br>
                             </div>
                             <div class="row">
-                                <h3><b>Disponibilidade</b></h3>
-                                <textarea cols="120" rows="5" placeholder="     Diga-nos a sua disponibilidade para marcar uma consulta" style="border-radius: 24px;"></textarea>
+                                <div class="col-md-6">
+                                    <h3><b>Disponibilidade</b></h3>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-6">
+                                    <input type="date" id="start" name="trip-start" value="2020-08-01" min="2020-08-01" max="2022-12-31">
+                                </div>
                             </div>
+                            
+                            <br>
+                            <br>
                             <br>
                             <br>
                             <div class="row">
-                                <h3><b>Motivo</b></h3>
-                                <textarea cols="120" rows="12" placeholder="        Diga-nos o problema do seu animal" style ="border-radius: 36px;"></textarea>
+                                <div class="col-md-6" style="text-align: left;">
+                                    <h3><b>Motivo</b></h3>
+                                </div>
+                                <textarea cols="100" rows="10" placeholder="        Diga-nos o problema do seu animal" style ="border-radius: 36px;"></textarea>
                             </div>
                             <div class="col-md-9" style="text-align: left;">
-
-                                <button class="button button1" onclick="myFunction()">Enviar mensagem</button>
+                                <br>    
+                                <a href="contact" class="btn" style="background-color: #00539C; color: white;" onclick="myFunction()">Enviar mensagem</a>
 
                                 <script>
                                     function myFunction() {

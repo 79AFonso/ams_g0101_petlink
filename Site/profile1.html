@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Perfil</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="PETLINK" name="keywords">
+        <meta content="PETLINK" name="description">
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <a>
+                                    PETLINK
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <a href="shop" class="nav-item nav-link">Loja</a>
+                                        <a href="about" class="nav-item nav-link">About</a>
+                                        <a href="contact" class="nav-item nav-link">Marcação Consulta</a>
+                                        <a href="index" class="nav-item nav-link">Log Out</a>
+                                        <a href="cart" class="btn"><i class="fa fa-shopping-cart"></i>Carrinho</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header End -->
+            
+            <div class="wrapper">
+                
+                <div class="container light-style flex-grow-1 container-p-y">
+
+                  <h4 class="font-weight-bold py-3 mb-4">
+                    Definições de Conta
+                  </h4>
+
+                  <div class="card overflow-hidden">
+                    <div class="row no-gutters row-bordered row-border-light">
+                      <div class="col-md-3 pt-0">
+                        <ul class="list-group list-group-flush account-settings-links">
+                          <li><a class="list-group-item list-group-item-action active" data-toggle="list" href="#account-general">Geral</a></li>
+                          <li><a class="list-group-item list-group-item-action" data-toggle="list" href="#account-change-password">Mudar Password</a></li>
+                          <li><a class="list-group-item list-group-item-action" data-toggle="list" href="#account-info">Info</a></li>
+                          <li><a class="list-group-item list-group-item-action" data-toggle="list" href="clinicsheets">Criar ficha médica</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="tab-content">
+                          <div class="tab-pane fade active show" id="account-general">
+
+                            <div class="card-body media align-items-center">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="d-block ui-w-80">
+                              <div class="media-body ml-4">
+                                <label class="btn btn-outline-primary">
+                                  Upload new photo
+                                  <input type="file" class="account-settings-fileinput">
+                                </label> &nbsp;
+                                <button type="button" class="btn btn-default md-btn-flat">Reset</button>
+
+                                <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                              </div>
+                            </div>
+                            <hr class="border-light m-0">
+
+                            <div class="card-body">
+                              <div class="form-group">
+                                <label class="form-label">Username</label>
+                                <input type="text" class="form-control mb-1" value="nmaxwell">
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" value="Nelle Maxwell">
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label">E-mail</label>
+                                <input type="text" class="form-control mb-1" value="nmaxwell@mail.com">
+                                <div class="alert alert-warning mt-3">
+                                  Your email is not confirmed. Please check your inbox.<br>
+                                  <a href="javascript:void(0)">Resend confirmation</a>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label">Company</label>
+                                <input type="text" class="form-control" value="Company Ltd.">
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+
+                              <div class="form-group">
+                                <label class="form-label">Current password</label>
+                                <input type="password" class="form-control">
+                              </div>
+
+                              <div class="form-group">
+                                <label class="form-label">New password</label>
+                                <input type="password" class="form-control">
+                              </div>
+
+                              <div class="form-group">
+                                <label class="form-label">Repeat new password</label>
+                                <input type="password" class="form-control">
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+
+                              <div class="form-group">
+                                <label class="form-label">Bio</label>
+                                <textarea class="form-control" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus.</textarea>
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label">Birthday</label>
+                                <input type="text" class="form-control" value="May 3, 1995">
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label">Country</label>
+                                <select class="custom-select">
+                                  <option>USA</option>
+                                  <option selected="">Canada</option>
+                                  <option>UK</option>
+                                  <option>Germany</option>
+                                  <option>France</option>
+                                </select>
+                              </div>
+
+
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+
+                              <h6 class="mb-4">Contacts</h6>
+                              <div class="form-group">
+                                <label class="form-label">Phone</label>
+                                <input type="text" class="form-control" value="+0 (123) 456 7891">
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label">Website</label>
+                                <input type="text" class="form-control" value="">
+                              </div>
+
+                            </div>
+                    
+                          </div>
+        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="text-right mt-3">
+                    <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+                    <button type="button" class="btn btn-default">Cancel</button>
+                  </div>
+
+                </div>
+                              
+                              
+              </div>
+              <script>
+              $(document).ready(function(){
+                $(".nav-tabs a").click(function(){
+                  $(this).tab('show');
+                });
+              });
+              </script>
+              
+              <!-- Footer Start -->
+            <div class="footer">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-6 col-lg-3"></div>
+                      <div class="col-md-6 col-lg-3">
+                          <div class="footer-contact">
+                              <h2>Contactos</h2>
+                              <p><i class="fa fa-map-marker-alt"></i>Avenida UA, Aveiro, Portugal</p>
+                              <p><i class="fa fa-phone-alt"></i>+351 234098765</p>
+                              <p><i class="fa fa-envelope"></i>example@ua.pt</p>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                          <div class="footer-link">
+                              <h2>Outros links</h2>
+                              <a href="">Parceiros</a>
+                              <a href="">Clientes</a>
+                              <a href="https://ams-2020.wixsite.com/petlink">Sobre PETLINK</a>
+                              <a href="">Perguntas</a>
+                          </div>
+                      </div> 
+                  </div>
+              </div>
+              <div class="container footer-menu">
+                  <div class="f-menu">
+                      <a href="">Ajuda & Perguntas</a>
+                      <a href="">Contacte a PETLINK</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Footer End -->
+        </div>
+    </body>
+</html>

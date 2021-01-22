@@ -28,6 +28,11 @@ config = {
              "tools.staticdir.dir": "Site/" },
 }
 
+# for local testing
+# cherrypy.config.update({'server.socket_port': 10022,})
+# errors = False
+
+# for heroku
 port = os.environ['PORT']
 cherrypy.config.update({
                             'server.socket_host': '0.0.0.0',
@@ -98,11 +103,13 @@ class Root(object):
 class Actions(object):
     @cherrypy.expose
     def doLogin(self, username=None, password=None):
+
         if username == "admin" and password == "admin":
              raise cherrypy.HTTPRedirect("/administration")
         if username in USERS and USERS[username] == password:
             raise cherrypy.HTTPRedirect("/profile")
         else:
+            errors = True
             raise cherrypy.HTTPRedirect("/login")
 
     @cherrypy.expose
